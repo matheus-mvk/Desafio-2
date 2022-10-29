@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-const MainContainer = styled.section`
-
-    height: 70%;
-    width: 70%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    border: 1px solid black;
+const MainContainer = styled.main`
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
+    align-items: center;
     justify-content: center;
 `;
 
-export { MainContainer };
+const FormContainer = styled.section`
+    height: 80vh;
+    width: 80vw;
+
+`;
+
+export { FormContainer, MainContainer };

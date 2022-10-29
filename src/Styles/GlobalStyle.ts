@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 16px;
 		body, #root {
 			width: 100vw;
-			min-height: 100vh;
+			height: 100vh;
+			
 			color: #F2F2F2;
 		}
 		body {
