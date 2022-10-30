@@ -1,19 +1,5 @@
 import styled from "styled-components";
 
-const FormContainer = styled.form`
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: row;
-    grid-gap: 10%;
-    
-`;
 const FieldContainer = styled.fieldset`
     position: relative;
     height: 85%;
@@ -27,19 +13,18 @@ const FieldContainer = styled.fieldset`
     align-items: center;
     flex-direction: column;
 
-    & > label{
-        color: black;
-        margin: auto 70% -2% 0;
-
-        font-size: 0.8rem;
-        
-    }
     & > select {
-        height: 5%;
-        width: 80%;
+        height: 7%;
+        width: 85%;
         margin: auto;
     
         border-radius: 1px;
+
+        font-size: 10px;
+
+        & > option{
+            font-size: 10px;
+        } 
     }
 
 `;
@@ -64,11 +49,7 @@ const InputData = styled.input`
 
 `;
 
-const InputSub = styled.input`
-    height: 7%;
-    width: 20%;
-    position: fixed;
-`;
 
 
-export {FieldContainer, Title2, InputData, FormContainer, InputSub};
+
+export {FieldContainer, Title2, InputData};

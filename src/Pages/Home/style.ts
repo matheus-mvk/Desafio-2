@@ -9,10 +9,18 @@ const MainContainer = styled.main`
     justify-content: center;
 `;
 
-const FormContainer = styled.section`
+const FormContainer = styled.form`
+    position: relative;
     height: 80vh;
     width: 80vw;
 
-`;
+    
 
-export { FormContainer, MainContainer };
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    grid-gap: 10%;
+
+`;
+export { MainContainer, FormContainer };

@@ -1,17 +1,16 @@
-import { FormContainer, MainContainer } from "./style";
-import { RegisterForm } from "../../components/RegisterForm";
-
+import { MainContainer, FormContainer } from "./style";
+import { InputData } from "../../components/InputData";
+import { SelectsDestiny } from "../../components/SelectsDestiny";
+import { InputSubmit } from "../../components/InputSubmit";
 
 const Home: React.FC = () =>{
     return(
         <MainContainer>
-
             <FormContainer>
-
-                <RegisterForm/>
-                
+                <InputData/>
+                <SelectsDestiny/>
+                <InputSubmit/>
             </FormContainer>
-            
         </MainContainer>
     );
 }
