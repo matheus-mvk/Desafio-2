@@ -12,4 +12,4 @@ const InputSubmit: React.FC = () =>{
         <InputSub type="submit" name="register" value="Enviar" onChange={() => handleSubmit(event)}/>
     )
 }
-export {InputSubmit};
+export { InputSubmit };
