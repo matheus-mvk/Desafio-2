@@ -10,8 +10,9 @@ const FieldContainer = styled.fieldset`
     
 
     display: flex;
-    align-items: center;
+    
     flex-direction: column;
+    
 
     & > select {
         height: 7%;
@@ -20,11 +21,6 @@ const FieldContainer = styled.fieldset`
     
         border-radius: 1px;
 
-        font-size: 10px;
-
-        & > option{
-            font-size: 10px;
-        } 
     }
 
 `;
@@ -36,20 +32,22 @@ const Title2 = styled.h2`
 
     font-weight: 400;
     font-size: 1rem;
+    text-align: center;
 `;
 
-const InputData = styled.input`
-    height: 6%;
-    width: 80%;
-    margin: auto;
 
-    border-radius: 1px;
-    box-shadow: none;
+
+const TextP = styled.p`
     color: black;
 
+    font-weight: 300;
+    font-size: 0.8rem;
+
+    margin-left: 5%;
+    margin-bottom: 15%;
+    
+    text-align: left;
 `;
 
 
-
-
-export {FieldContainer, Title2, InputData};
+export {FieldContainer, Title2, TextP};

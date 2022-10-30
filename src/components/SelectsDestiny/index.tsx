@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FieldContainer, Title2 } from "./style";
+import { FieldContainer, Title2, TextP } from "./style";
 
 import axios from "axios";
 
@@ -16,9 +16,10 @@ const SelectsDestiny: React.FC = () =>{
     
 
 
-    const [ countrys, setCountrys ] = useState<ICountry[]>([]);
+    const [ countrys, setCountrys] = useState<ICountry[]>([]);
     const [ citys, setCitys] = useState<ICity[]>([]);
-    const [ myCountrys, setMyCountrys] = useState<string>("")
+    const [ myCountrys, setMyCountrys] = useState<string>("");
+    const [ myCitys, setMyCitys] = useState<string>("");
 
     
 
@@ -40,11 +41,16 @@ const SelectsDestiny: React.FC = () =>{
         .catch(error => console.log(error))
     })
 
-    function getCountry(event: any){
-        const pais = event.target.value;
-        setMyCountrys((prev) => prev + pais + ", ");
-        console.log(setMyCountrys);
+    function addMyCountry(event: any){
+        const country = event.target.value;
+        setMyCountrys((prev) => prev + country + ", ");
     }
+
+    function addMyCitys(event: any){
+        const city = event.target.value;
+        setMyCitys((prev) => prev + " " + city + ";");
+    }
+
     return(
         <>
             
@@ -52,21 +58,24 @@ const SelectsDestiny: React.FC = () =>{
                     <Title2>
                         Destinos de interesse
                     </Title2>
-                    <select name="Countrys" onChange={() => getCountry(event)}>
-                        <option value="countrysSelected"selected>{myCountrys}</option>
+                    <select name="Countrys" required onChange={() => addMyCountry(event)}>
                         {countrys.map((country) =>{
                             return <option value={country.name}>{country.name}</option>;
 
                         })}
                     </select>
                     
-                    <select name="City" id="">
+                    <TextP>My countrys:{myCountrys}</TextP>
+                    
+                    <select name="City" required onChange={() => addMyCitys(event)}>
                         {citys.map((city) =>{
                             return <option value={city.name}>{city.name}</option>;
 
                         })}
                     </select>
                     
+                    <TextP>My citys:{myCitys}</TextP>
+
                 </FieldContainer>  
             
         </>

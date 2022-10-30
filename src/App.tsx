@@ -6,8 +6,8 @@ const App = () => {
 
   return (
     <>
-    <GlobalStyle />
-    <Home/>
+      <GlobalStyle />
+      <Home/>
     </>
   )
 }
